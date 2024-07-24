@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Kenkey Sales App</title>
+</head>
+<body>
+    <div id="alertContainer"></div>
+    <div class="container">
+        <h1>Kenkey Sales App</h1>
+        <form id="salesForm" name="salesForm">
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="shop">Shop:</label>
+            <select id="shop" name="shop" required>
+                <option value="PT1_Mile_11">PT1 Mile 11</option>
+                <option value="PT2_Block_Factory">PT2 Block Factory</option>
+                <!-- Add more shops as needed -->
+            </select>
+
+            <button type="button" onclick="showQuantityForm()">Enter Quantity</button>
+            <button type="button" onclick="showReturnsForm()">Enter Returns</button>
+            <button type="button" onclick="showCashReport()">Cash Report</button>
+
+            <div id="quantityForm" class="hidden">
+                <h2>Enter Quantity</h2>
+                <!-- Table to display quantity form -->
+                <table id="quantityTable">
+                    <tbody id="foodItemsContainer"></tbody>
+                </table>
+                <button type="button" onclick="submitQuantity()">Submit Quantity</button>
+            </div>
+            
+            <div id="returnsForm" class="hidden">
+                <h2>Enter Returns</h2>
+                <!-- Table to display returns form -->
+                <table id="returnsTable">
+                    <tbody id="returnsItemsContainer"></tbody>
+                </table>
+                <div class="button-container">
+                    <button type="button" onclick="submitReturns()">Submit Returns</button>
+                    <button type="button" onclick="printData()">Print</button>
+                </div>
+            </div>
+            
+    
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

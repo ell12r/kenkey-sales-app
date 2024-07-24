@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reportStyles.css">
+    <title>Cash Report</title>
+</head>
+<body>
+    <h2>Cash Report</h2>
+
+    <label for="shop">Select Shop:</label>
+    <select id="shop">
+        <!-- Populate this dynamically with shop data from the server if needed -->
+        <option value="all">All Shops</option>
+        <option value="PT1_Mile_11">PT1 Mile 11</option>
+        <option value="PT2_Block_Factory">PT2 Block Factory</option>
+        <!-- Add more options as needed -->
+    </select>
+
+    <label for="date">Select Date or Date Range:</label>
+    <input type="date" id="startDate">
+    <span>to</span>
+    <input type="date" id="endDate">
+
+    <button onclick="generateCashReport()">Generate Report</button>
+    <button onclick="printCashReport()">Print Report</button>
+    <div id="reportContainer"></div>
+    
+    <script src="reportScript.js"></script>
+</body>
+</html>
