@@ -226,7 +226,7 @@ function showReturnsForm() {
 
 function showCashReport() {
     // Open the cashReport page in a new tab
-    window.open('/cashReport.html', '_blank');
+    window.open('cashReport.html', '_blank');
 }
 
 async function submitReturns() {
